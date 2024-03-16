@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <audio autoplay="autoplay" controls="controls"loop="loop" preload="auto" src="爆炸贪吃蛇2.mp3">
+    <style type="text/css">
+        audio{
+                display: none;
+            }
+   </style>
+</audio>
+    <style>
+        body{
+            background: -webkit-linear-gradient(rgba(0, 255, 200, 0.925), skyblue);
+            color: #fff;
+        }
+        table{
+            border-collapse: collapse;
+            background: transparent;
+            border: 1px solid #fff;
+        }
+        td{
+            width: 24px;
+            height: 24px;
+            color: rgb(0, 251, 255);
+            text-align: center;
+            background: transparent;
+            border: 1px solid #fff;
+        }
+        /* td标签下的color就是食物颜色 */
+/* 绿rgb(85, 255, 0); */
+/* 红rgb(255, 145, 0); */
+/* 蓝rgb(0, 251, 255) */
+    </style>
+        <link rel="stylesheet" href="index.css">
+    
+</head>
+<body>
+
+</script>
+<a href="#" onclick="flushPage()">贪吃蛇</a>
+<a href="#" onclick="historyPlayD()">历史回放</a>
+<script type="text/javascript">
+    const buttons=document.querySelectorAll('a');
+    buttons.forEach(btn =>{
+        btn.addEventListener('click',function(e){
+            let x=e.clientX-e.target.offsetLeft;
+            let y=e.clientY-e.target.offsetTop;
+            let ripples=document.createElement('span');
+            ripples.style.left=x+'px';
+            ripples.style.top=y+'px';
+            this.appendChild(ripples);
+            setTimeout(() =>{
+                ripples.remove()
+            },1000);
+        })
+    })
+
+</script>
+    <h3 id="f">帧编号：0</h3>
+    <h3 id="score">分数：0</h3>
+    <div id="app"></div>
+    <script src="js/Game.js"></script>
+    <script src="js/Snake.js"></script>
+    <script src="js/food.js"></script>
+    <link rel="stylesheet" href="css/index.css"> 
+    <script>
+        var game = new Game("0");
+		function historyPlayD(){
+			game = new Game("1");
+		}
+		function flushPage(){
+			window.location.reload();
+		}
+    </script>
+    
+</body>
+</html>

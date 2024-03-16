@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/black.png</file>
+        <file>res/board1.jpg</file>
+        <file>res/chessone.wav</file>
+        <file>res/lose.wav</file>
+        <file>res/white.png</file>
+        <file>res/win.wav</file>
+        <file>res/welcome.png</file>
+        <file>res/zuixiaohua.png</file>
+        <file>res/close.png</file>
+        <file>res/go.png</file>
+        <file>res/time.png</file>
+        <file>res/restart.png</file>
+        <file>res/1.png</file>
+        <file>res/regret.png</file>
+    </qresource>
+</RCC>
